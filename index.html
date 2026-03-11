@@ -16,6 +16,14 @@
         --page-w: 210mm;
         --page-h: 297mm;
       }
+
+       *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
       [data-theme="dark"] {
         --bg: #0a0c10;
         --paper: #111318;
@@ -30,15 +38,24 @@
         font-family: sans-serif;
         background: #f0f0f0;
       }
-
+      /*Wrapper*/
       .cv-contenedor {
-        
         padding: 60px 24px 48px;
         display: flex;
         justify-content: center;
       }
+      /*Pagina A4 CV0*/
+       .page {
+        width: var(--page-w);
+        height: var(--page-h);
+        background: var(--paper);
+        padding: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
 
-      .cv-encabezado {
+      .cv-header {
         border-bottom: 2px solid var(--accent);
         padding-bottom: 10px;
         margin-bottom: 16px;
@@ -72,16 +89,6 @@
           background 0.3s,
           color 0.3s;
       }
-      .page {
-        width: var(--page-w);
-        height: var(--page-h);
-        background: var(--paper);
-        padding: 40px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-      }
-
       .cv-nombre {
         font-size: 22pt;
         font-weight: 800;
@@ -101,7 +108,7 @@
       .cv-contacto {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         gap: 3px;
       }
 
@@ -129,6 +136,7 @@
         border-bottom: 1px solid var(--border);
         padding-bottom: 3px;
         margin-bottom: 10px;
+        transition: border-color 0.3s;
       }
 
       .cv-sobre-mi {
@@ -136,18 +144,66 @@
         color: var(--muted);
         line-height: 1.6;
       }
+       .cv-columnas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      /*Experiencia*/
+       .timeline-item {
+        margin-bottom: 10px;
+      }
+
+      .timeline-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .timeline-titulo {
+        font-weight: 700;
+        font-size: 9.5pt;
+        color: var(--text);
+      }
+
+      .timeline-fecha {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 7.5pt;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .timeline-subtitulo {
+        font-size: 8pt;
+        color: var(--muted);
+        margin: 1px 0 3px;
+        font-style: italic;
+      }
+
+      .timeline-descripcion {
+        font-size: 8.5pt;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
     </style>
   </head>
 
   <body>
     <div class="cv-contenedor">
       <div class="page">
-        <div class="cv-encabezado">
+        <div class="cv-header">
           <div>
             <div class="cv-nombre">Víctor Javier Suárez Acosta</div>
-            <div class="cv-rol">// Web Developer Junior</div>
+            <div class="cv-rol">// Junior Web Developer</div><br>
           </div>
-
           <div class="cv-contacto">
             <span>Valencia, España</span>
             <span>641 851 438</span>
@@ -172,6 +228,50 @@
             Docker y desarrollo de APIs REST.
           </p>
         </div>
+        <div class="cv-columnas">
+          <div>
+            <div class="cv-section">
+              <div class="cv-titulo-seccion">Experiencia</div>
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <div class="timeline-titulo">Desarrollador Web Junior</div>
+                  <div class="timeline-fecha">2024 – Actualidad</div>
+                </div>
+                <div class="timeline-subtitulo">Freelance / Proyectos propios</div>
+                <div class="timeline-descripcion">
+                  Desarrollo de aplicaciones con Laravel y PHP, maquetación
+                  responsive con HTML/CSS/JS y configuración de entornos con
+                  Docker.
+                </div>
+              </div>
+               <hr class="cv-divider" />
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <div class="timeline-titulo">Prácticas formativas</div>
+                  <div class="timeline-fecha">2023 – 2024</div>
+                </div>
+                <div class="timeline-subtitulo">Ciclo DAW</div>
+                <div class="timeline-descripcion">
+                  Proyectos profesionales desarrollando backend con el framework Laravel, integración de APIs personalizadas y creación de un SSO(Single Sign-On) con Laravel Passport siguiendo el protocolo OAuth 2.0 + JWT.
+                </div>
+              </div>
+            </div>
+
+            <div class="cv-section">
+              <div class="cv-titulo-seccion">Educación</div>
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <div class="timeline-titulo">Desarrollo de Aplicaciones Web</div>
+                  <div class="timeline-fecha">2024 – 2026</div>
+                </div>
+                <div class="timeline-subtitulo">CFGS DAW · Valencia</div>
+                <div class="timeline-descripcion">
+                  Frontend, backend, bases de datos relacionales y despliegue de
+                  aplicaciones.
+                </div>
+              </div>
+              <hr class="cv-divider" />
+            </div>
       </div>
     </div>
   </body>
