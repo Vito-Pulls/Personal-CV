@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV – Víctor Javier Suárez Acosta</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Syne:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <style>
+      :root {
+        --page-w: 210mm;
+        --page-h: 297mm;
+      }
+      [data-theme="dark"] {
+        --bg: #0a0c10;
+        --paper: #111318;
+        --border: #1e2330;
+        --text: #e2e8f0;
+        --muted: #64748b;
+        --accent: #00e5ff;
+        --ui-bg: #0a0c10;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #f0f0f0;
+      }
+
+      .cv-contenedor {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 40px;
+      }
+
+      .cv-encabezado {
+        border-bottom: 2px solid var(--accent);
+        padding-bottom: 10px;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+      }
+
+      .cv-columnas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .cv-seccion {
+        margin-bottom: 25px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: var(--ui-bg);
+        font-family: "Syne", sans-serif;
+        color: var(--text);
+        transition:
+          background 0.3s,
+          color 0.3s;
+      }
+      .page {
+        width: var(--page-w);
+        height: var(--page-h);
+        background: var(--paper);
+        padding: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cv-nombre {
+        font-size: 22pt;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+
+      .cv-rol {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 8pt;
+        color: var(--muted);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-top: 4px;
+      }
+
+      .cv-contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 3px;
+      }
+
+      .cv-contacto a,
+      .cv-contacto span {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 7.5pt;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .cv-contacto a:hover {
+        color: var(--accent);
+      }
+      .cv-seccion {
+        margin-bottom: 14px;
+      }
+      .cv-titulo-seccion {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 7pt;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 3px;
+        margin-bottom: 10px;
+      }
+
+      .cv-sobre-mi {
+        font-size: 9pt;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="cv-contenedor">
+      <div class="page">
+        <div class="cv-encabezado">
+          <div>
+            <div class="cv-nombre">Víctor Javier Suárez Acosta</div>
+            <div class="cv-rol">// Web Developer Junior</div>
+          </div>
+
+          <div class="cv-contacto">
+            <span>Valencia, España</span>
+            <span>641 851 438</span>
+            <a href="mailto:vjavier170103@gmail.com">vjavier170103@gmail.com</a>
+            <a
+              href="https://linkedin.com/in/victor-javier-b428a8342/"
+              target="_blank"
+            >
+              linkedin.com/in/victor-javier-b428a8342
+            </a>
+            <a href="https://github.com/Vito-Pulls" target="_blank">
+              github.com/Vito-Pulls
+            </a>
+          </div>
+        </div>
+
+        <div class="cv-seccion">
+          <div class="cv-titulo-seccion">Sobre mí</div>
+          <p class="cv-sobre-mi">
+            Desarrollador web junior con formación en HTML/CSS/JS, PHP y el
+            framework Laravel. Experiencia en configuración de entornos con
+            Docker y desarrollo de APIs REST.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
