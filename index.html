@@ -17,7 +17,7 @@
         --page-h: 297mm;
       }
 
-       *,
+      *,
       *::before,
       *::after {
         box-sizing: border-box;
@@ -34,9 +34,26 @@
         --ui-bg: #0a0c10;
       }
 
+          [data-theme="light"] {
+        --bg: #f0f0f0;
+        --paper: #ffffff;
+        --border: #d1d5db;
+        --text: #111827;
+        --muted: #6b7280;
+        --accent: #111827;
+        --tag-bg: #f3f4f6;
+        --tag-color: #374151;
+        --btn-bg: #e5e7eb;
+        --btn-color: #111827;
+        --ui-bg: #f0f0f0;
+      }
       body {
-        font-family: sans-serif;
-        background: #f0f0f0;
+        background: var(--ui-bg);
+        font-family: "Syne", sans-serif;
+        color: var(--text);
+        transition:
+          background 0.3s,
+          color 0.3s;
       }
       /*Wrapper*/
       .cv-contenedor {
@@ -49,10 +66,13 @@
         width: var(--page-w);
         height: var(--page-h);
         background: var(--paper);
-        padding: 40px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
+        border: 1px solid var(--border);
+        padding: 14mm 16mm 14mm;
+        font-size: 10pt;
+        line-height: 1.5;
+        transition:
+          background 0.3s,
+          border-color 0.3s;
       }
 
       .cv-header {
@@ -62,38 +82,20 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        gap: 16px;
         flex-wrap: wrap;
-      }
-
-      .cv-columnas {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
       }
 
       .cv-seccion {
         margin-bottom: 25px;
       }
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background: var(--ui-bg);
-        font-family: "Syne", sans-serif;
-        color: var(--text);
-        transition:
-          background 0.3s,
-          color 0.3s;
-      }
       .cv-nombre {
         font-size: 22pt;
         font-weight: 800;
         letter-spacing: -0.02em;
         line-height: 1;
+        color: var(--text);
       }
 
       .cv-rol {
