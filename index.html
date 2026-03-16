@@ -34,7 +34,7 @@
         --ui-bg: #0a0c10;
       }
 
-          [data-theme="light"] {
+      [data-theme="light"] {
         --bg: #f0f0f0;
         --paper: #ffffff;
         --border: #d1d5db;
@@ -62,7 +62,7 @@
         justify-content: center;
       }
       /*Pagina A4 CV0*/
-       .page {
+      .page {
         width: var(--page-w);
         height: var(--page-h);
         background: var(--paper);
@@ -146,14 +146,14 @@
         color: var(--muted);
         line-height: 1.6;
       }
-       .cv-columnas {
+      .cv-columnas {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
       }
 
       /*Experiencia*/
-       .timeline-item {
+      .timeline-item {
         margin-bottom: 10px;
       }
 
@@ -194,7 +194,6 @@
         color: var(--muted);
         line-height: 1.55;
       }
-
     </style>
   </head>
 
@@ -204,7 +203,8 @@
         <div class="cv-header">
           <div>
             <div class="cv-nombre">Víctor Javier Suárez Acosta</div>
-            <div class="cv-rol">// Junior Web Developer</div><br>
+            <div class="cv-rol">// Junior Web Developer</div>
+            <br />
           </div>
           <div class="cv-contacto">
             <span>Valencia, España</span>
@@ -232,21 +232,23 @@
         </div>
         <div class="cv-columnas">
           <div>
-            <div class="cv-section">
+            <div class="cv-seccion">
               <div class="cv-titulo-seccion">Experiencia</div>
               <div class="timeline-item">
                 <div class="timeline-header">
                   <div class="timeline-titulo">Desarrollador Web Junior</div>
                   <div class="timeline-fecha">2024 – Actualidad</div>
                 </div>
-                <div class="timeline-subtitulo">Freelance / Proyectos propios</div>
+                <div class="timeline-subtitulo">
+                  Freelance / Proyectos propios
+                </div>
                 <div class="timeline-descripcion">
                   Desarrollo de aplicaciones con Laravel y PHP, maquetación
                   responsive con HTML/CSS/JS y configuración de entornos con
                   Docker.
                 </div>
               </div>
-               <hr class="cv-divider" />
+              <hr class="cv-divider" />
               <div class="timeline-item">
                 <div class="timeline-header">
                   <div class="timeline-titulo">Prácticas formativas</div>
@@ -254,16 +256,21 @@
                 </div>
                 <div class="timeline-subtitulo">Ciclo DAW</div>
                 <div class="timeline-descripcion">
-                  Proyectos profesionales desarrollando backend con el framework Laravel, integración de APIs personalizadas y creación de un SSO(Single Sign-On) con Laravel Passport siguiendo el protocolo OAuth 2.0 + JWT.
+                  Proyectos profesionales desarrollando backend con el framework
+                  Laravel, integración de APIs personalizadas y creación de un
+                  SSO(Single Sign-On) con Laravel Passport siguiendo el
+                  protocolo OAuth 2.0 + JWT.
                 </div>
               </div>
             </div>
 
-            <div class="cv-section">
+            <div class="cv-seccion">
               <div class="cv-titulo-seccion">Educación</div>
               <div class="timeline-item">
                 <div class="timeline-header">
-                  <div class="timeline-titulo">Desarrollo de Aplicaciones Web</div>
+                  <div class="timeline-titulo">
+                    Desarrollo de Aplicaciones Web
+                  </div>
                   <div class="timeline-fecha">2024 – 2026</div>
                 </div>
                 <div class="timeline-subtitulo">CFGS DAW · Valencia</div>
@@ -272,8 +279,56 @@
                   aplicaciones.
                 </div>
               </div>
-              <hr class="cv-divider" />
             </div>
+
+            <div class="cv-seccion">
+              <div class="cv-titulo-seccion">Idiomas</div>
+              <div class="idioma-item">
+                <span class="idioma-nombre">Español:</span>
+                <span class="idioma-nivel">Nativo</span>
+              </div>
+              <div class="idioma-item">
+                <span class="idioma-nombre">Inglés:</span>
+                <span class="idioma-nivel">C1</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="cv-seccion">
+              <div class="cv-titulo-seccion">Stack técnico</div>
+              <div class="habilidad-item">
+                <span class="habilidad-nombre">HTML / CSS</span>
+                <div class="habilidad-barra">
+                  <div class="habilidad-nivel" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="habilidad-item">
+                <span class="habilidad-nombre">JavaScript</span>
+                <div class="habilidad-barra">
+                  <div class="habilidad-nivel" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="habilidad-item">
+                <span class="habilidad-nombre">PHP</span>
+                <div class="habilidad-barra">
+                  <div class="habilidad-nivel" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="habilidad-item">
+                <span class="habilidad-nombre">Laravel</span>
+                <div class="habilidad-barra">
+                  <div class="habilidad-nivel" style="width: 60%"></div>
+                </div>
+              </div>
+              <div class="habilidad-item">
+                <span class="habilidad-nombre">Docker</span>
+                <div class="habilidad-barra">
+                  <div class="habilidad-nivel" style="width: 60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
