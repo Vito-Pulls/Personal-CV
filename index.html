@@ -79,11 +79,15 @@
         border-bottom: 2px solid var(--accent);
         padding-bottom: 10px;
         margin-bottom: 16px;
+        display: block;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .cv-header-fila {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
-        gap: 16px;
-        flex-wrap: wrap;
+        align-items: stretch;
+        margin-top: 10px;
       }
 
       .cv-seccion {
@@ -110,8 +114,9 @@
       .cv-contacto {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         align-items: flex-start;
-        gap: 3px;
+        gap: 20px;
       }
 
       .cv-contacto a,
@@ -319,37 +324,29 @@
           background: #fff !important;
           min-height: auto !important;
         }
-      }
-      * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
 
-      .cv-titulo-seccion,
-      .cv-divider,
-      .idioma-item {
-        border-color: #ccc !important;
-      }
+        .cv-titulo-seccion,
+        .cv-divider,
+        .idioma-item {
+          border-color: #ccc !important;
+        }
 
-      .habilidad-barra {
-        background-color: #eee !important;
-        border: 1px solid #ddd;
-      }
-      .habilidad-nivel {
-        background-color: #000 !important;
+        .habilidad-barra {
+          background-color: #eee !important;
+          border: 1px solid #ddd;
+        }
+        .habilidad-nivel {
+          background-color: #000 !important;
+        }
       }
 
       .linkedin-btn {
-        display: inline-flex;
-        align-items: left;
-        justify-content: left;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background-color: var(--paper); 
-        color: white;
-        text-decoration: none;
-        transition: transform 0.2s ease;
+        display: flex;
+        background-color: var(--paper);
       }
 
       .linkedin-btn svg {
@@ -359,6 +356,13 @@
       .linkedin-btn:hover {
         transform: scale(1.1);
         background-color: #005582;
+      }
+
+      .cv-foto {
+        width: auto;
+        height: 140px;
+        border: 2px solid var(--border);
+        display: block;
       }
     </style>
   </head>
@@ -411,26 +415,31 @@
             <div class="cv-rol">// Desarrollador Web Junior</div>
             <br />
           </div>
-          <div class="cv-contacto">
-            <span>Valencia, España</span>
-            <span>641 851 438</span>
-            <a href="mailto:vjavier170103@gmail.com">vjavier170103@gmail.com</a>
-            <a
-              href="https://linkedin.com/in/victor-javier-b428a8342/"
-              target="_blank"
-              class="linkedin-btn"
-              aria-label="LinkedIn"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
+          <div class="cv-header-fila">
+            <div class="cv-contacto">
+              <span>Valencia, España</span>
+              <span>641 851 438</span>
+              <a href="mailto:vjavier170103@gmail.com"
+                >vjavier170103@gmail.com</a
               >
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                />
-              </svg>
-            </a>
+              <a
+                href="https://linkedin.com/in/victor-javier-b428a8342/"
+                target="_blank"
+                class="linkedin-btn"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <img src="photoCV.png" alt="Víctor Javier" class="cv-foto" />
           </div>
         </div>
 
