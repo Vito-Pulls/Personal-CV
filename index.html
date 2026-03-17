@@ -64,7 +64,7 @@
       /*Pagina A4 CV0*/
       .page {
         width: var(--page-w);
-        height: var(--page-h);
+        min-height: var(--page-h);
         background: var(--paper);
         border: 1px solid var(--border);
         padding: 14mm 16mm 14mm;
@@ -301,7 +301,43 @@
         border-color: var(--accent);
         color: var(--accent);
       }
-     
+      @media print {
+        html,
+        body {
+          background: #fff !important;
+        }
+        .toolbar {
+          display: none !important;
+        }
+        .cv-contenedor {
+          padding: 0;
+        }
+        .page {
+          width: 100%;
+          border: none;
+          padding: 12mm 14mm;
+          background: #fff !important;
+          min-height: auto !important;
+        }
+      }
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .cv-titulo-seccion,
+      .cv-divider,
+      .idioma-item {
+        border-color: #ccc !important;
+      }
+
+      .habilidad-barra {
+        background-color: #eee !important;
+        border: 1px solid #ddd;
+      }
+      .habilidad-nivel {
+        background-color: #000 !important;
+      }
     </style>
   </head>
 
